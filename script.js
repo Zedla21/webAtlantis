@@ -1,6 +1,13 @@
 $( document ).ready(function() {
     mueveReloj()
+    comprobarCheckBox()
 })
+
+function comprobarCheckBox(){
+    $('#darkMode').change(function() {
+        console.log($('#darkMode').prop('checked'))
+      })
+}
 
 function valorConCero(valor){
     if(valor<10)
@@ -9,19 +16,6 @@ function valorConCero(valor){
 }
 
 function setDocumentTime(diferencia){
-    /* 
-    $("#dia").empty()
-    $("#dia").append(valorConCero(diferencia.getDate()-1))
-
-    $("#hora").empty()
-    $("#hora").append(valorConCero(diferencia.getHours()+3))
-
-    $("#min").empty()
-    $("#min").append(valorConCero(diferencia.getMinutes()))
-
-    $("#seg").empty()
-    $("#seg").append(valorConCero(diferencia.getSeconds()))
-    */
    var Horas = diferencia.getHours()+3;
    var Dias = diferencia.getDate() - 1;
     if((diferencia.getHours()+3) >= 24 ){
@@ -29,15 +23,29 @@ function setDocumentTime(diferencia){
         Dias = Dias+1;
     }
 
-    var tiempo =  valorConCero(Dias) + " : " + valorConCero(Horas) + " : " + valorConCero(diferencia.getMinutes()) + " : " + valorConCero(diferencia.getSeconds());
+    /* var tiempo =  valorConCero(Dias) + " : " + valorConCero(Horas) + " : " + valorConCero(diferencia.getMinutes()) + " : " + valorConCero(diferencia.getSeconds());
     $("#tiempo").empty()
-    $("#tiempo").append(tiempo)
+    $("#tiempo").append(tiempo) */
+    var dia = valorConCero(Dias);
+    $("#dia").empty()
+    $("#dia").append(dia)
 
+    var hora = valorConCero(Horas);
+    $("#hora").empty()
+    $("#hora").append(hora)
 
+    var min = valorConCero(diferencia.getMinutes());
+    $("#min").empty()
+    $("#min").append(min)
+
+    var seg = valorConCero(diferencia.getSeconds());
+    $("#seg").empty()
+    $("#seg").append(seg)
 }
 
 function mueveReloj(){
-    console.clear()
+    //console.clear()
+    
     let momentoActual = new Date()
     let momentoDeSalida = new Date('2023/02/18')
 

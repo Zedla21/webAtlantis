@@ -7,25 +7,28 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icono.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icono.jpg" type="image/x-icon">
     <title>Cuenta Regresiva</title>
 </head>
 <body>
+    <label class="switch">
+        <input type="checkbox" id="darkMode">
+        <span class="slider"></span>
+    </label>
     <h1>Cuenta regresiva Nueva Atlantis</h1>
     <div class="contenedor">
-        <div class="vertical-div"><p id="tiempo" class="tiempo"></p></div>
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/HLfUf6x4YgA" title="YouTube video player" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p class="autor">by anonimus.</p>
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/P0kwvtEP59M" title="YouTube video player" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p class="autor">by mar.</p>
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/Bi9jyrNw09M" title="YouTube video player" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p class="autor">by mar.</p>
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/Fpu5a0Bl8eY" title="YouTube video player" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p class="autor">by mar.</p>
+        <div class="vertical-div">
+            <p id="dia" class="tiempo" style="--clr:#1da1f2;"></p>
+            <p class="tiempo" style="--clr:#979797;">:</p>
+            <p id="hora" class="tiempo" style="--clr:#1df228;">10</p>
+            <p class="tiempo" style="--clr:#979797;">:</p>
+            <p id="min" class="tiempo" style="--clr:#f21d28;">10</p>
+            <p class="tiempo" style="--clr:#979797;">:</p>
+            <p id="seg" class="tiempo" style="--clr:#f2ee1d;">10</p>
+        </div>
+        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/BDQSaJNqjmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p class="autor">by tano</p>
     </div>
+
 </body>
 </html>

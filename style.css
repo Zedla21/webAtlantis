@@ -1,15 +1,24 @@
+
+
 body{
     padding: 0;
-    background-color: rgb(235, 227, 227);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*
+    background-color: rgb(235, 227, 227);
     background-image: url("playa2.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: auto;*/
+    background-color: #252839;
+    color: lightgrey;
+}
+h1{
+    text-shadow: #000000 1px 0 25px;
 }
 .contenedor{
     width: 80%;
     margin-left: 10%;
     align-items: center;
+    text-align:center;
 }
 ul{
     margin: auto;
@@ -25,15 +34,18 @@ li{
     margin-left: 15%;
 }
 .tiempo{
-    color: rgb(34, 34, 34);
+    display: inline;
     text-align: center;
     padding: 5px 5px;
-    font-size: xx-large;
+    font-size: 6rem;
+    -webkit-text-stroke: 2px var(--clr);
+    color: transparent;
+    text-shadow: var(--clr) 1px 0 50px;
 }
 .vertical-div{
-    background-color: rgb(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 10px #555;
-    text-shadow: 1px 1px #555;
+    /*background-color: rgb(255, 255, 255, 0.1);*/
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+    /*text-shadow: 1px 1px #555;*/
 }
 h1{
     text-align: center;
@@ -42,3 +54,79 @@ h1{
     color: rgb(34, 34, 34);
     float: right;
 }
+
+/*
+.contenedor{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.gallery{
+    margin-top: 5rem;
+    display: grid;
+    gap: 10rem;
+    grid-auto-rows: 12rem;
+    /*grid-template-columns: repeat(auto-fill, 20rem);
+    grid-template-columns: repeat(auto-fill, 20rem);
+    align-items: center;
+}
+
+article{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border: solid black 1px;
+    border-radius: 15px;
+}
+
+.vertical-div{
+    top: 35%;
+    position: relative;
+    text-align: center;
+}*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+.switch input[type="checkbox"] { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333333;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(170, 170, 170);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input[type="checkbox"]:checked + .slider {
+    background-color: #dbdbdb;
+  }
+  
+  input[type="checkbox"]:focus + .slider {
+    box-shadow: 0 0 1px #d8d8d8;
+  }
+  input[type="checkbox"]:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }

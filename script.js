@@ -22,10 +22,6 @@ function setDocumentTime(diferencia){
         Horas = 0;
         Dias = Dias+1;
     }
-
-    /* var tiempo =  valorConCero(Dias) + " : " + valorConCero(Horas) + " : " + valorConCero(diferencia.getMinutes()) + " : " + valorConCero(diferencia.getSeconds());
-    $("#tiempo").empty()
-    $("#tiempo").append(tiempo) */
     var dia = valorConCero(Dias);
     $("#dia").empty()
     $("#dia").append(dia)
@@ -44,7 +40,7 @@ function setDocumentTime(diferencia){
 }
 
 function mueveReloj(){
-    //console.clear()
+    console.clear()
     
     let momentoActual = new Date()
     let momentoDeSalida = new Date('2023/02/18')
@@ -57,3 +53,4 @@ function mueveReloj(){
     setDocumentTime(diferencia)
     setTimeout("mueveReloj()", 1000)
 }
+

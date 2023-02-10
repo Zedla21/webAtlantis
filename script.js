@@ -1,12 +1,24 @@
 $( document ).ready(function() {
     mueveReloj()
-    comprobarCheckBox()
+    cambiarReloj()
 })
 
-function comprobarCheckBox(){
-    $('#darkMode').change(function() {
-        console.log($('#darkMode').prop('checked'))
-      })
+var cambio = true;
+
+function cambiarReloj(){
+    $("#tiempo").hide()
+    $("#segundos").show()
+    $("#cambiar").click(function(){
+        if(cambio==true){
+            $("#segundos").hide()
+            $("#tiempo").show()
+            cambio=false;
+        }else{
+            $("#segundos").show()
+            $("#tiempo").hide()
+            cambio=true;
+        }
+    })
 }
 
 function valorConCero(valor){

@@ -14,17 +14,22 @@ h1{
     text-align:center;
 }
 ul{
-    margin: auto;
+    background-color: transparent;
+    position: fixed;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    padding: 0px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    top: 5px;
+    right: 0;
 }
 li{
-    float: left;
-    margin-left: 15%;
+    float: right;
+}
+li img{
+    width: 50px;
+    display: block;
+    float: right;
 }
 .tiempo{
     display: inline;
@@ -35,7 +40,7 @@ li{
     color: transparent;
     text-shadow: var(--clr) 1px 0 50px;
 }
-.vertical-div{
+.frames{
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
 }
 h1{
